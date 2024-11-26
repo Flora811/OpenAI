@@ -1,4 +1,4 @@
-// Import required modules
+// Import modules
 const express = require('express');
 const axios = require('axios');
 const { body, validationResult } = require('express-validator');
@@ -14,8 +14,8 @@ dotenv.config();
 
 // Initialize the OpenAI API
 const openAiClient = new openai.OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,  // Use the key stored in your .env
-  organization: process.env.OPENAI_ORG_KEY,  // Optionally use an organization key if needed
+  apiKey: process.env.OPENAI_API_KEY,  
+  organization: process.env.OPENAI_ORG_KEY,  
 });
 
 // Set up rate limiter for OpenAI API calls (rate limiting 5 requests per minute)
